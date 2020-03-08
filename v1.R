@@ -10,6 +10,7 @@ train<-read.csv('C:/Users/keank/Google Drive/KY/kaggle/house-prices-advanced-reg
 test<-read.csv('C:/Users/keank/Google Drive/KY/kaggle/house-prices-advanced-regression-techniques/test.csv')
 
 train<-data.table(train); test<-data.table(test) # test has no sales price
-train
+train_features<-
+train[,!SalePrice,with=F] # next step: remove the sale price col and merge before cleaning 
 test
 all<-cbind(train, te) # train has ids 1460 and below
